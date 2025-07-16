@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --dm_sans: "DM Sans", sans-serif;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 5.9% 10%;
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.active-link {
+    @apply font-medium;
+}
+.link {
+    @apply font-light text-blk-10 hover:text-white duration-200;
+}
+
+.btn-primary {
+    @apply bg-pri-100 rounded-full text-blk-100 py-4 px-10  active:opacity-80  duration-200 capitalize font-poppins;
+}
+.btn-primary2 {
+    @apply bg-pri-100 rounded-full text-blk-100 active:opacity-80  duration-200 capitalize font-poppins;
+}
+
+.btn-secondary {
+    @apply bg-white rounded-full text-blk-100 py-4 px-10  active:opacity-80  duration-200 capitalize font-poppins;
+}
+
+.btn-outline {
+    @apply rounded-full text-white py-4 px-10 outline outline-2 outline-white  active:opacity-80  duration-200 capitalize font-poppins;
+}
+.btn-outline2 {
+    @apply rounded-full text-white outline outline-2 outline-white duration-200 capitalize font-poppins hover:bg-pri-100 hover:text-blk-100 hover:outline-blk-100 active:opacity-80;
+}
+.btn-outline-blk {
+    @apply rounded-full text-blk-100 outline outline-2 outline-blk-100  active:opacity-80  duration-200 capitalize font-poppins py-4 px-10;
+}
+.btn-outline-icon {
+    @apply rounded-full p-5 text-white transition duration-150 ease-in-out hover:text-pri-100 hover:outline hover:outline-[3px] hover:outline-pri-100 active:scale-[0.98];
+}
+
+.btn-wishlist {
+    @apply bg-blk-100 p-3 rounded-xl active:scale-95 duration-200 hover:text-blk-100 hover:bg-pri-100;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    @apply text-foreground focus:outline-none focus:ring-pri-50
+    focus:opacity-80  duration-200;
+}
+
+.card {
+    -webkit-box-shadow: 5px 31px 84px -11px rgba(193, 239, 85, 0.31);
+    -moz-box-shadow: 5px 31px 84px -11px rgba(193, 239, 85, 0.31);
+    box-shadow: 5px 31px 84px -11px rgba(193, 239, 85, 0.31);
+}
